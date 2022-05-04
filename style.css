@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #F7F9FC;
+}
+h1,h2{
+  font-family: 'Montserrat', sans-serif;
+}
+h1{
+  color: #B983FF;
+}
+h2{
+  color: #94B3FD;
+}
+a, p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+  display: inline;
+  padding: 10px;
+}
+#img-circle{
+  width: 150px;
+  border-radius: 50%;
+  float: left;
+}
+
+.button{
+  padding: 15px 20px;
+  background-color: #B983FF;
+  border: none;
+  border-radius: 4px;
+  transition: .2s ease-in-out 0s;
+  opacity: 0.6;
+}
+.button:hover{
+  cursor: pointer;
+  transform: scale(1.10);
+  opacity: 1;
+}
+.button a{
+  color: white;
+  font-weight: 600;
+}
+div{
+  display: block;
+}
+
+.card-white{
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  padding: 40px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0px 10px 30px rgb(0 0 0 / 10%);
+}
+.card-white h2,img,p,ul,.button{
+  margin-top: 20px;
+}
+.card-white ul{
+  text-align: center;
+}
+i{
+  font-size: 30px;
+  color: #B983FF;
+  opacity: 0.6;
+}
+i:hover{
+  opacity: 1;
+}
+/*flip card*/
+
+.card {
+  width: 160px;
+  border-radius:20px;
+  height: 190px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.face:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: -1;
+  display: block;
+  content: '';
+  height: 22px;
+  width: 100%;
+  background: url('http://media.a-g.fr/crea/talenance/shadow.png') no-repeat;
+  background-size: 100%;
+}
+.face {
+  border-radius:20px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 300px;
+  color: white;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+      transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+}
+
+.front {
+  background-size:cover;
+  z-index: 2;
+}
+
+.back {
+  z-index: 1;
+  transform:rotateY(180deg);
+}
+
+
+
+.back a:before {
+  content:"";
+  background-size:cover;
+  position: absolute;
+  width:50px;
+  height: 50px;
+  left:0;
+  right:0;
+  margin:0 auto;
+    filter:invert(100%) brightness(150%);
+  -webkit-filter:invert(100%) brightness(150%);
+}
+
+.back a:hover {
+  opacity:0.5;
+}
+
+.card:hover .front{
+  transform:rotateY(-180deg);
+}
+.card:hover .back{
+  transform:rotateY(0deg);
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1 0 18%; /* The important bit. This percentage decides your columns.
+ The percent can be px. It just represents your minimum starting width.
+  */
+  margin: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.helicopter {
+  font-size: 30px;
+  transform: translate3d(100px, 100px, 200px) rotateX(-90deg) rotateY(45deg);
+  animation: helicopter 25s ease-in-out infinite;
+}
+
+
+@media (max-width: 960px) {
+  /* Pour un écran < 960px, cette classe CSS s'applique */
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 720px) {
+  /* Pour un écran < 720px, cette classe CSS s'applique */
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 540px) {
+  /* Pour un écran < 540px, cette classe CSS s'applique */
+  .container {
+    width: 300px;
+  }
+}
